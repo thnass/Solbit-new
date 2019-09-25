@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head data-suburl="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>GitHub-Mirror/Bitcoin - depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch at a615386552f9981dc024cc4a0df758f8b0fda4d8 - A Git Repo</title>
+	<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
+	<script>
+		if ('serviceWorker' in navigator) {
+  			window.addEventListener('load', function() {
+    			navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+      				
+      				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					
+      				console.log('ServiceWorker registration failed: ', err);
+    			});
+  			});
+		}
+
+	</script>
+
+	<meta name="theme-color" content="#6cc644">
+	<meta name="author" content="GitHub-Mirror" />
+	<meta name="description" content="Bitcoin" />
+	<meta name="keywords" content="go,git,self-hosted,gitea">
+	<meta name="referrer" content="no-referrer" />
+	<meta name="_csrf" content="EudilywCuUY548xeWZJfspkYXm06MTU2OTQzOTg4ODA3OTk1Njc2NA==" />
+	<meta name="_suburl" content="" />
+	
+	
+	
+
+
+	<script>
+	/*
+	@licstart  The following is the entire license notice for the
+        JavaScript code in this page.
+
+	Copyright (c) 2016 The Gitea Authors
+	Copyright (c) 2015 The Gogs Authors
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+	---
+	Licensing information for additional javascript libraries can be found at:
+	  {{AppSubUrl}}/vendor/librejs.html
+
+	@licend  The above is the entire license notice
+        for the JavaScript code in this page.
+	*/
+	</script>
+
+	<link rel="shortcut icon" href="/img/favicon.png" />
+	<link rel="mask-icon" href="/img/gitea-safari.svg" color="#609926">
+	<link rel="preload" href="/vendor/assets/font-awesome/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="/vendor/assets/font-awesome/css/font-awesome.min.css"></noscript>
+	<link rel="stylesheet" href="/vendor/assets/octicons/octicons.min.css">
+
+
+
+
+
+
+
+	
+	<link rel="stylesheet" href="/vendor/plugins/semantic/semantic.min.css">
+	<link rel="stylesheet" href="/css/index.css?v=d50e4db2a47a37cb706484947587e71d">
+	<noscript>
+		<style>
+			.dropdown:hover > .menu { display: block; }
+			.ui.secondary.menu .dropdown.item > .menu { margin-top: 0; }
+		</style>
+	</noscript>
+
+
+	<link rel="stylesheet" href="/vendor/plugins/highlight/github.css">
+
+
+
+
+
+	<style class="list-search-style"></style>
+
+	<script src="/vendor/plugins/promise-polyfill/polyfill.min.js"></script>
+	<script src="/vendor/plugins/cssrelpreload/loadCSS.min.js"></script>
+	<script src="/vendor/plugins/cssrelpreload/cssrelpreload.min.js"></script>
+
+	<meta property="og:title" content="Bitcoin" />
+	<meta property="og:type" content="object" />
+	<meta property="og:image" content="https://code.obermui.de/img/avatar_default.png" />
+	<meta property="og:url" content="https://code.obermui.de/GitHub-Mirror/Bitcoin" />
+	
+	<meta property="og:site_name" content="A Git Repo" />
+
+
+
+</head>
+<body>
+	
+
+	<div class="full height">
+		<noscript>This website works better with JavaScript.</noscript>
+
+		
+
+		
+			<div class="ui top secondary stackable main menu following bar light">
+				<div class="ui container" id="navbar">
+	<div class="item brand" style="justify-content: space-between;">
+		<a href="/">
+			<img class="ui mini image" src="/img/gitea-sm.png">
+		</a>
+		<div class="ui basic icon button mobile-only" id="navbar-expand-toggle">
+			<i class="sidebar icon"></i>
+		</div>
+	</div>
+
+	
+		<a class="item " href="/">Home</a>
+		<a class="item " href="/explore/repos">Explore</a>
+	
+
+	
+
+	
+
+	
+
+		<a class="item" target="_blank" rel="noopener noreferrer" href="https://docs.gitea.io">Help</a>
+		<div class="right stackable menu">
+			
+				<a class="item" href="/user/sign_up">
+					<i class="octicon octicon-person"></i> Register
+				</a>
+			
+			<a class="item" href="/user/login?redirect_to=%2fGitHub-Mirror%2fBitcoin%2fsrc%2fcommit%2fa615386552f9981dc024cc4a0df758f8b0fda4d8%2fdepends%2fpatches%2fzeromq%2f9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">
+				<i class="octicon octicon-sign-in"></i> Sign In
+			</a>
+		</div>
+
+	
+</div>
+
+			</div>
+		
+
+
+<div class="repository file list">
+	<div class="header-wrapper">
+
+	<div class="ui container">
+		<div class="repo-header">
+			<div class="ui huge breadcrumb repo-title">
+				<i class="mega-octicon octicon-repo-clone"></i>
+				<a href="/GitHub-Mirror">GitHub-Mirror</a>
+				<div class="divider"> / </div>
+				<a href="/GitHub-Mirror/Bitcoin">Bitcoin</a>
+				
+				<div class="fork-flag">mirror of <a target="_blank" rel="noopener noreferrer" href="https://github.com/bitcoin/bitcoin">https://github.com/bitcoin/bitcoin</a></div>
+				
+			</div>
+			<div class="repo-buttons">
+				<div class="ui labeled button" tabindex="0">
+					<a class="ui compact basic button" href="/GitHub-Mirror/Bitcoin/action/watch?redirect_to=%2fGitHub-Mirror%2fBitcoin%2fsrc%2fcommit%2fa615386552f9981dc024cc4a0df758f8b0fda4d8%2fdepends%2fpatches%2fzeromq%2f9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">
+						<i class="icon fa-eye-slash"></i>Watch
+					</a>
+					<a class="ui basic label" href="/GitHub-Mirror/Bitcoin/watchers">
+						1
+					</a>
+				</div>
+				<div class="ui labeled button" tabindex="0">
+					<a class="ui compact basic button" href="/GitHub-Mirror/Bitcoin/action/star?redirect_to=%2fGitHub-Mirror%2fBitcoin%2fsrc%2fcommit%2fa615386552f9981dc024cc4a0df758f8b0fda4d8%2fdepends%2fpatches%2fzeromq%2f9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">
+						<i class="icon star outline"></i>Star
+					</a>
+					<a class="ui basic label" href="/GitHub-Mirror/Bitcoin/stars">
+						0
+					</a>
+				</div>
+				
+					<div class="ui labeled button " tabindex="0">
+						<a class="ui compact basic button poping up"  data-content="Sign in to fork this repository." href="/user/login?redirect_to=/repo/fork/107"  data-position="top center" data-variation="tiny">
+							<i class="octicon octicon-repo-forked"></i>Fork
+						</a>
+						<a class="ui basic label" href="/GitHub-Mirror/Bitcoin/forks">
+							0
+						</a>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ui tabs container">
+		<div class="ui tabular stackable menu navbar">
+			
+			<a class="active item" href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8">
+				<i class="octicon octicon-code"></i> Code
+			</a>
+			
+
+			
+				<a class=" item" href="/GitHub-Mirror/Bitcoin/issues">
+					<i class="octicon octicon-issue-opened"></i> Issues <span class="ui gray small label">0</span>
+				</a>
+			
+
+			
+
+			
+
+			
+			<a class=" item" href="/GitHub-Mirror/Bitcoin/releases">
+				<i class="octicon octicon-tag"></i> Releases <span class="ui blue small label">222</span>
+			</a>
+			
+
+			
+				<a class=" item" href="/GitHub-Mirror/Bitcoin/wiki" >
+					<i class="octicon octicon-book"></i> Wiki
+				</a>
+			
+
+			
+				<a class=" item" href="/GitHub-Mirror/Bitcoin/activity">
+					<i class="octicon octicon-pulse"></i> Activity
+				</a>
+			
+
+			
+
+			
+		</div>
+	</div>
+	<div class="ui tabs divider"></div>
+
+</div>
+
+	<div class="ui container">
+		
+
+
+
+		<div class="ui repo-description">
+			<div id="repo-desc">
+				
+				<a class="link" href=""></a>
+			</div>
+			
+				<div class="ui repo-search">
+					<form class="ui form ignore-dirty" action="/GitHub-Mirror/Bitcoin/search" method="get">
+						<div class="field">
+							<div class="ui action input">
+								<input name="q" value="" placeholder="Search repository">
+								<button class="ui icon button" type="submit">
+									<i class="search icon"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			
+		</div>
+		<div class="ui" id="repo-topics">
+		
+		
+		</div>
+		
+		<div class="hide" id="validate_prompt">
+			<span id="count_prompt">You can not select more than 25 topics</span>
+			<span id="format_prompt">Topics must start with a letter or number, can include dashes (&#39;-&#39;) and can be up to 35 characters long.</span>
+		</div>
+		
+		<div class="ui segment sub-menu">
+	<div class="ui two horizontal center link list">
+		
+			<div class="item">
+				<a href="/GitHub-Mirror/Bitcoin/commits/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8"><i class="octicon octicon-history"></i> <b>11203</b> Commits</a>
+			</div>
+		
+		
+			<div class="item">
+				<a href="/GitHub-Mirror/Bitcoin/branches/"><i class="octicon octicon-git-branch"></i> <b>6</b> Branches</a>
+			</div>
+		
+	</div>
+</div>
+
+		<div class="ui stackable secondary menu mobile--margin-between-items mobile--no-negative-margins">
+			<div class="fitted item choose reference">
+	<div class="ui floating filter dropdown custom" data-can-create-branch="false" data-no-results="No results found.">
+		<div class="ui basic small compact button" @click="menuVisible = !menuVisible" @keyup.enter="menuVisible = !menuVisible">
+			<span class="text">
+				<i class="octicon octicon-git-branch"></i>
+				Tree:
+				<strong>a615386552</strong>
+			</span>
+			<i class="dropdown icon"></i>
+		</div>
+		<div class="data" style="display: none" data-mode="branches">
+			
+				<div class="item branch " data-url="/GitHub-Mirror/Bitcoin/src/branch/master/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">master</div>
+			
+				<div class="item branch " data-url="/GitHub-Mirror/Bitcoin/src/branch/0.14/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">0.14</div>
+			
+				<div class="item branch " data-url="/GitHub-Mirror/Bitcoin/src/branch/0.15/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">0.15</div>
+			
+				<div class="item branch " data-url="/GitHub-Mirror/Bitcoin/src/branch/0.16/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">0.16</div>
+			
+				<div class="item branch " data-url="/GitHub-Mirror/Bitcoin/src/branch/0.17/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">0.17</div>
+			
+				<div class="item branch " data-url="/GitHub-Mirror/Bitcoin/src/branch/0.18/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">0.18</div>
+			
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.18.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.18.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.0.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.0.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.17.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.17.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.16.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.16.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.0.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.0.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.15.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.15.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.14.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.14.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.1rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.1rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.13-final/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.13-final</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.0rc5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.0rc5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.12-final/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.12-final</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.11.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.11.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.4rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.4rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.3rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.3rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.3rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.3rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.1rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.1rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.10.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.10.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.5rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.5rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.5rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.5rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.3rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.3rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.3rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.3rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.2.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.2.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.9-final/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.9-final</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.6rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.6rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.6/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.6</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.4rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.4rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.2rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.2rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.2rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.2rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.8-final/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.8-final</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.7.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.7.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.3rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.3rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.2.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.2.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.2.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.2.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0rc6/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0rc6</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0rc5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0rc5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.6.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.6.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.3rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.3rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.1rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.1rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc7/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc7</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc6/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc6</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.5.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.5.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.4.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.4.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.4.00rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.4.00rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.4.00rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.4.00rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.24rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.24rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.24rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.24rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.24rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.24rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.24/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.24</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.23rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.23rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.23/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.23</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22rc6/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22rc6</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22rc5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22rc5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22rc4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22rc4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22rc3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22rc3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.22/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.22</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.21rc/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.21rc</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.21/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.21</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.20.2_closest/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.20.2_closest</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.20.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.20.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.20.01_closest/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.20.01_closest</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.20/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.20</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.19/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.19</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.18/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.18</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.17/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.17</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.15/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.15</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.14/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.14</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.13/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.13</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.12/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.12</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.11_notexact/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.11_notexact</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.10/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.10</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.8</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.7/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.7</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.6/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.6</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.3/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.3</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.1rc1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.1rc1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.3.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.3.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2rc2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2rc2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.13/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.13</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.12/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.12</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.11/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.11</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.10/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.10</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.9/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.9</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.8</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.7/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.7</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.6/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.6</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.4/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.4</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.2/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.2</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.2.0/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.2.0</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.1.6test1/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.1.6test1</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/v0.1.5/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">v0.1.5</div>
+			
+				<div class="item tag " data-url="/GitHub-Mirror/Bitcoin/src/tag/noversion/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">noversion</div>
+			
+		</div>
+		<div class="menu transition" :class="{visible: menuVisible}" v-if="menuVisible" v-cloak>
+			<div class="ui icon search input">
+				<i class="filter icon"></i>
+				<input name="search" ref="searchField" v-model="searchTerm" @keydown="keydown($event)" placeholder="Filter branch or tag...">
+			</div>
+			<div class="header branch-tag-choice">
+				<div class="ui grid">
+					<div class="two column row">
+						<a class="reference column" href="#" @click="mode = 'branches'; focusSearchField()">
+							<span class="text" :class="{black: mode == 'branches'}">
+								<i class="octicon octicon-git-branch"></i> Branches
+							</span>
+						</a>
+						<a class="reference column" href="#" @click="mode = 'tags'; focusSearchField()">
+							<span class="text" :class="{black: mode == 'tags'}">
+								<i class="reference tags icon"></i> Tags
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="scrolling menu" ref="scrollContainer">
+				<div v-for="(item, index) in filteredItems" :key="item.name" class="item" :class="{selected: item.selected, active: active == index}" @click="selectItem(item)" :ref="'listItem' + index">${ item.name }</div>
+				<div class="item" v-if="showCreateNewBranch" :class="{active: active == filteredItems.length}" :ref="'listItem' + filteredItems.length">
+					<a href="#" @click="createNewBranch()">
+						<div>
+							<i class="octicon octicon-git-branch"></i>
+							Create branch <strong>${ searchTerm }</strong>
+						</div>
+						<div class="text small">
+							
+								from &#39;a615386552&#39;
+							
+						</div>
+					</a>
+					<form ref="newBranchForm" action="/GitHub-Mirror/Bitcoin/branches/_new/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8" method="post">
+						<input type="hidden" name="_csrf" value="EudilywCuUY548xeWZJfspkYXm06MTU2OTQzOTg4ODA3OTk1Njc2NA==">
+						<input type="hidden" name="new_branch_name" v-model="searchTerm">
+					</form>
+				</div>
+			</div>
+			<div class="message" v-if="showNoResults">${ noResults }</div>
+		</div>
+	</div>
+</div>
+
+			
+			
+			
+			
+				<div class="fitted item"><span class="ui breadcrumb repo-path"><a class="section" href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8">Bitcoin</a><span class="divider">/</span><span class="section"><a href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends">depends</a></span><span class="divider">/</span><span class="section"><a href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches">patches</a></span><span class="divider">/</span><span class="section"><a href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq">zeromq</a></span><span class="divider">/</span><span class="active section">9e6745c12e0b100cd38acecc16c...</span></span></div>
+			
+			<div class="right fitted item" id="file-buttons">
+				<div class="ui tiny blue buttons">
+					
+					
+				</div>
+
+			</div>
+			<div class="fitted item">
+
+				
+				
+			</div>
+		</div>
+		
+			<div class="tab-size-8 non-diff-file-content">
+	<h4 class="ui top attached header" id="repo-read-file">
+		<div class="ui stackable grid">
+			<div class="ten wide column">
+				
+					<i class="file text outline icon ui left"></i>
+					<strong>9e6745c12e0b100cd38acecc16ce7db02905e27c.patch</strong> <span class="text grey normal">641B</span>
+				
+			</div>
+			<div class="six wide right aligned column">
+				
+					<div class="ui right file-actions">
+						<div class="ui buttons">
+							
+							<a class="ui button" href="/GitHub-Mirror/Bitcoin/commits/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">History</a>
+							<a class="ui button" href="/GitHub-Mirror/Bitcoin/raw/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch">Raw</a>
+						</div>
+						
+					</div>
+				
+			</div>
+		</div>
+	</h4>
+	<div class="ui attached table unstackable segment">
+		<div class="file-view code-view has-emoji">
+			
+				<table>
+					<tbody>
+						<tr>
+						
+							<td class="lines-num"><span id="L1">1</span><span id="L2">2</span><span id="L3">3</span><span id="L4">4</span><span id="L5">5</span><span id="L6">6</span><span id="L7">7</span><span id="L8">8</span><span id="L9">9</span><span id="L10">10</span><span id="L11">11</span><span id="L12">12</span><span id="L13">13</span><span id="L14">14</span><span id="L15">15</span><span id="L16">16</span><span id="L17">17</span><span id="L18">18</span><span id="L19">19</span><span id="L20">20</span><span id="L21">21</span><span id="L22">22</span></td>
+							<td class="lines-code"><pre><code class="patch"><ol class="linenums"><li class="L1" rel="L1">From 9e6745c12e0b100cd38acecc16ce7db02905e27c Mon Sep 17 00:00:00 2001
+</li><li class="L2" rel="L2">From: David Millard &lt;dmillard10@gmail.com&gt;
+</li><li class="L3" rel="L3">Date: Tue, 10 May 2016 13:53:53 -0700
+</li><li class="L4" rel="L4">Subject: [PATCH] Fix autotools for static MinGW builds
+</li><li class="L5" rel="L5">
+</li><li class="L6" rel="L6">---
+</li><li class="L7" rel="L7"> configure.ac | 2 +-
+</li><li class="L8" rel="L8"> 1 file changed, 1 insertion(+), 1 deletion(-)
+</li><li class="L9" rel="L9">
+</li><li class="L10" rel="L10">diff --git a/configure.ac b/configure.ac
+</li><li class="L11" rel="L11">index 5a0fa14..def6ea7 100644
+</li><li class="L12" rel="L12">--- a/configure.ac
+</li><li class="L13" rel="L13">+++ b/configure.ac
+</li><li class="L14" rel="L14">@@ -259,7 +259,7 @@ case &#34;${host_os}&#34; in
+</li><li class="L15" rel="L15">         libzmq_dso_visibility=&#34;no&#34;
+</li><li class="L16" rel="L16">
+</li><li class="L17" rel="L17">         if test &#34;x$enable_static&#34; = &#34;xyes&#34;; then
+</li><li class="L18" rel="L18">-            CPPFLAGS=&#34;-DZMQ_STATIC&#34;
+</li><li class="L19" rel="L19">+            CPPFLAGS=&#34;-DZMQ_STATIC $CPPFLAGS&#34;
+</li><li class="L20" rel="L20">         fi
+</li><li class="L21" rel="L21">
+</li><li class="L22" rel="L22"> 	# Set FD_SETSIZE to 1024</li></ol></code></pre></td>
+						
+						</tr>
+					</tbody>
+				</table>
+			
+		</div>
+	</div>
+</div>
+
+<script>
+function submitDeleteForm() {
+    var message = prompt("delete_confirm_message\n\ndelete_commit_summary", "Delete ''");
+    if (message != null) {
+        $("#delete-message").val(message);
+        $("#delete-file-form").submit()
+    }
+}
+</script>
+
+		
+	</div>
+</div>
+
+
+	
+
+	</div>
+
+	
+
+	<footer>
+	<div class="ui container">
+		<div class="ui left">
+			© Gitea Version: 1.8.3 Page: <strong>1252ms</strong> Template: <strong>23ms</strong>
+		</div>
+		<div class="ui right links">
+			
+			<div class="ui language bottom floating slide up dropdown link item">
+				<i class="world icon"></i>
+				<div class="text">English</div>
+				<div class="menu">
+					
+						<a lang="en-US" class="item active selected" href="#">English</a>
+					
+						<a lang="zh-CN" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=zh-CN">简体中文</a>
+					
+						<a lang="zh-HK" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=zh-HK">繁體中文（香港）</a>
+					
+						<a lang="zh-TW" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=zh-TW">繁體中文（台灣）</a>
+					
+						<a lang="de-DE" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=de-DE">Deutsch</a>
+					
+						<a lang="fr-FR" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=fr-FR">français</a>
+					
+						<a lang="nl-NL" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=nl-NL">Nederlands</a>
+					
+						<a lang="lv-LV" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=lv-LV">latviešu</a>
+					
+						<a lang="ru-RU" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=ru-RU">русский</a>
+					
+						<a lang="ja-JP" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=ja-JP">日本語</a>
+					
+						<a lang="es-ES" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=es-ES">español</a>
+					
+						<a lang="pt-BR" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=pt-BR">português do Brasil</a>
+					
+						<a lang="pl-PL" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=pl-PL">polski</a>
+					
+						<a lang="bg-BG" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=bg-BG">български</a>
+					
+						<a lang="it-IT" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=it-IT">italiano</a>
+					
+						<a lang="fi-FI" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=fi-FI">suomi</a>
+					
+						<a lang="tr-TR" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=tr-TR">Türkçe</a>
+					
+						<a lang="cs-CZ" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=cs-CZ">čeština</a>
+					
+						<a lang="sr-SP" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=sr-SP">српски</a>
+					
+						<a lang="sv-SE" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=sv-SE">svenska</a>
+					
+						<a lang="ko-KR" class="item " href="/GitHub-Mirror/Bitcoin/src/commit/a615386552f9981dc024cc4a0df758f8b0fda4d8/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch?lang=ko-KR">한국어</a>
+					
+				</div>
+			</div>
+			<a href="/vendor/librejs.html" data-jslicense="1">JavaScript licenses</a>
+			<a href="/api/swagger">API</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://gitea.io">Website</a>
+			<span class="version">Go1.12.8</span>
+		</div>
+	</div>
+</footer>
+
+
+	<script src="/vendor/plugins/jquery/jquery.min.js"></script>
+	<script src="/vendor/plugins/jquery.areyousure/jquery.are-you-sure.js"></script>
+
+
+
+
+
+	<script src="/vendor/plugins/highlight/highlight.pack.js"></script>
+
+
+
+
+
+
+
+	<script src="/vendor/plugins/emojify/emojify.min.js"></script>
+	<script src="/vendor/plugins/clipboard/clipboard.min.js"></script>
+	<script src="/vendor/plugins/vue/vue.min.js"></script>
+
+	
+	<script src="/vendor/plugins/semantic/semantic.min.js"></script>
+	<script src="/js/index.js?v=d50e4db2a47a37cb706484947587e71d"></script>
+
+
+</body>
+</html>
+
