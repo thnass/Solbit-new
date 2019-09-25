@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Solbit
+Comment=Solbit P2P Cryptocurrency
+Exec=solbit-qt %u
+Terminal=false
+Type=Application
+Icon=solbit128
+MimeType=x-scheme-handler/solbit;
+Categories=Office;Finance;
+Name[ru]=solbit-qt.desktop.desktop
